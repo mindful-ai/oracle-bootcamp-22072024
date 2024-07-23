@@ -1,0 +1,23 @@
+
+body {
+  background-color: rgb(230, 178, 173);
+  background-image: 'pics/matrix.jpg';
+}
+
+
+h1 {
+  color: white;
+  text-align: center;
+  background-color: gray;
+}
+
+h2 {
+  color: red;
+  text-align: right;
+}
+
+p {
+  font-family: verdana;
+  font-size: 20px;
+  background-color: lightgreen;
+}
