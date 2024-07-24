@@ -1,0 +1,429 @@
+C:\Users\Admin\Desktop\oracle\oracle-training\css>node 
+Welcome to Node.js v16.17.0.      
+Type ".help" for more information.
+> console.log('Hello')
+Hello
+undefined
+> var i = 10;
+undefined
+> typeof i
+'number'
+> s = "computer"
+'computer'
+> typeof s
+'string'
+> let a = []
+undefined
+> typefo a
+typefo a
+       ^
+
+Uncaught SyntaxError: Unexpected identifier
+> typeof a
+'object'
+> let d = {}
+undefined
+> typeof d
+'object'
+> let a;
+Uncaught SyntaxError: Identifier 'a' has already been declared
+> var a;
+Uncaught SyntaxError: Identifier 'a' has already been declared
+> var b;
+undefined
+> typeof b;
+'undefined'
+> // ---- NUMBERS -------------- //
+undefined
+> var  x = 10;
+undefined
+> var y = 20;
+undefined
+> // ----------- Arithmetic operators
+undefined
+> x + y
+30
+> x - y
+-10
+> x * y
+200
+> x / y
+0.5
+> x ** y
+100000000000000000000
+> ++a
+1
+> y + ++x
+31
+> x + y++
+31
+> // ----------- Relational Operators
+undefined
+> x > y
+false
+> x < y
+true
+> x <= y
+true
+> x >= y
+false
+> x != y
+true
+> x == y
+false
+> x == (y - 1)/2
+false
+> // --------------------- Logical operators
+undefined
+> x > 10 && x !== 17
+true
+> x > 10 || x !== 17
+true
+> !(x > 10) || x !== 17
+true
+> !(x > 10) || x != 17
+true
+> x
+11
+> x1 = new Number(11)
+[Number: 11]
+> x1
+[Number: 11]
+> x == x1
+true
+> x === x1
+false
+>
+>
+>
+>
+>
+>
+>
+>
+>
+> // --------------------------- STRINGS
+undefined
+>
+> let s = "mississippi"
+undefined
+> typeof s
+'string'
+> s[0]
+'m'
+> s[3]
+'s'
+> s[6]
+'s'
+> s[4:7]
+s[4:7]
+   ^
+
+Uncaught SyntaxError: Unexpected token ':'
+> // ---------------------- Strng functions
+undefined
+>
+> s.length
+11
+> s.search('ss')
+2
+> s.indexOf('ss')
+2
+> s.lastIndexOf('ss')
+5
+> s.slice(1,4)
+'iss'
+> s.substr
+[Function: substr]
+> s.substr(1,5)
+'issis'
+>
+>
+>
+> let t = "mary had a little lamb";
+undefined
+> t
+'mary had a little lamb'
+> t.replace('lamb', 'kitten')
+'mary had a little kitten'
+> t
+'mary had a little lamb'
+> s
+'mississippi'
+> s[5]
+'s'
+> s[5] = 'd'
+'d'
+> s
+'mississippi'
+> t.toUpperCase()
+'MARY HAD A LITTLE LAMB'
+> t.toLowerCase
+t.toLowerCase
+
+> t.toLowerCase()
+'mary had a little lamb'
+>
+>
+>
+> let n = " 123445   "
+undefined
+> n.trim()
+'123445'
+> parseInt(n)
+123445
+> let f = "3.14159"
+undefined
+> parseFloat(f)
+3.14159
+> n
+' 123445   '
+> n.concat('345')
+' 123445   345'
+> n.trim().concat('345')
+'123445345'
+>
+>
+>
+> t
+'mary had a little lamb'
+> t.split(' ')
+[ 'mary', 'had', 'a', 'little', 'lamb' ]
+> t.split('a')
+[ 'm', 'ry h', 'd ', ' little l', 'mb' ]
+> var words = ["sky", "is", "blue"]
+undefined
+> words.join("**")
+'sky**is**blue'
+>
+>
+>
+> // --------------------------------------- ARRAYS
+undefined
+>
+> var L = ["red", "green", "blue"]
+undefined
+> L
+[ 'red', 'green', 'blue' ]
+> L[0]
+'red'
+> L[2]
+'blue'
+> L[1] = "Seagreen"
+'Seagreen'
+> L
+[ 'red', 'Seagreen', 'blue' ]
+> L[1][2] = 'r'
+'r'
+> L
+[ 'red', 'Seagreen', 'blue' ]
+>
+>
+>
+>
+> // -------------------- Add elements in to the array
+undefined
+>
+> L
+[ 'red', 'Seagreen', 'blue' ]
+> L.push("yellow")
+4
+> L
+[ 'red', 'Seagreen', 'blue', 'yellow' ]
+> L.push("Orange")
+5
+> L.unshift("Golden")
+6
+> L
+[ 'Golden', 'red', 'Seagreen', 'blue', 'yellow', 'Orange' ]
+> L.splice(2, 0, "Cerulean")
+[]
+> L
+[
+  'Golden',   'red',
+  'Cerulean', 'Seagreen',
+  'blue',     'yellow',
+  'Orange'
+]
+> L.splice(2, 2, "golden-yellow")
+[ 'Cerulean', 'Seagreen' ]
+> L
+[ 'Golden', 'red', 'golden-yellow', 'blue', 'yellow', 'Orange' ]
+>
+>
+> // ----------------------- removing elements
+undefined
+>
+> L
+[ 'Golden', 'red', 'golden-yellow', 'blue', 'yellow', 'Orange' ]
+> L.pop()
+'Orange'
+> L
+[ 'Golden', 'red', 'golden-yellow', 'blue', 'yellow' ]
+> L.shift()
+'Golden'
+> L
+[ 'red', 'golden-yellow', 'blue', 'yellow' ]
+> L.splice(1,1)
+[ 'golden-yellow' ]
+> L
+[ 'red', 'blue', 'yellow' ]
+>
+>
+> // -------------------------------- searching for elements in a list
+undefined
+>
+> L.push("green")
+4
+> L
+[ 'red', 'blue', 'yellow', 'green' ]
+> L.includes
+[Function: includes]
+> L.includes("cyan")
+false
+> L.indexOf("yellow")
+2
+> L.find("blue")
+Uncaught TypeError: blue is not a function
+    at Array.find (<anonymous>)
+> L.find(function(e){return e == "cyan";});
+undefined
+> L.find(function(e){return e == "yellow"});
+'yellow'
+> L.push("yellow")
+5
+> L.find(function(e){return e == "yellow"});
+'yellow'
+> L.findIndex(function(e){return e == "yellow"});
+2
+> L
+[ 'red', 'blue', 'yellow', 'green', 'yellow' ]
+>
+>
+>
+> L.filter(function(e){return e == "yellow"});
+[ 'yellow', 'yellow' ]
+>
+> // ------------------------------- rearrangements of items
+undefined
+>
+> L
+[ 'red', 'blue', 'yellow', 'green', 'yellow' ]
+> L.sort()
+[ 'blue', 'green', 'red', 'yellow', 'yellow' ]
+> L.reverse()
+[ 'yellow', 'yellow', 'red', 'green', 'blue' ]
+>
+>
+> var N = [12, 45, 23, 67, 54, 33, 78]
+undefined
+> N.sort()
+[
+  12, 23, 33, 45,
+  54, 67, 78
+]
+> N.reverse()
+[
+  78, 67, 54, 45,
+  33, 23, 12
+]
+> L.sort((a, b) => (a - b))
+[ 'yellow', 'yellow', 'red', 'green', 'blue' ]
+> var N = [12, 45, 23, 67, 54, 33, 78]
+undefined
+> N.sort((a, b) => (a - b))
+[
+  12, 23, 33, 45,
+  54, 67, 78
+]
+> N.sort((a, b) => (b - a))
+[
+  78, 67, 54, 45,
+  33, 23, 12
+]
+> L
+[ 'yellow', 'yellow', 'red', 'green', 'blue' ]
+> L.sort((a, b) => (b - a))
+[ 'yellow', 'yellow', 'red', 'green', 'blue' ]
+> L.sort((a, b) => (a - b))
+[ 'yellow', 'yellow', 'red', 'green', 'blue' ]
+>
+>
+> L.sort((a, b) => a.localCompare(b))
+Uncaught TypeError: a.localCompare is not a function
+    at REPL519:1:20
+    at Array.sort (<anonymous>)
+> L.sort((a, b) => a.localeCompare(b))
+[ 'blue', 'green', 'red', 'yellow', 'yellow' ]
+> L.sort((a, b) => b.localeCompare(a))
+[ 'yellow', 'yellow', 'red', 'green', 'blue' ]
+>
+>
+>
+> // ---------------------------- iterate on a list
+undefined
+>
+> L
+[ 'yellow', 'yellow', 'red', 'green', 'blue' ]
+> for item in L {
+for item in L {
+    ^^^^
+
+Uncaught SyntaxError: Unexpected identifier
+> for (item in L) {
+... console.log(item)
+... }
+0
+1
+2
+3
+4
+undefined
+> for (item of L) {
+... console.log(item)
+... }
+yellow
+yellow
+red
+green
+blue
+undefined
+> for (item of L) { console.log(item.toUpperCase()) }
+YELLOW
+YELLOW
+RED
+GREEN
+BLUE
+undefined
+>
+>
+> // ------------------------------- objects
+undefined
+>
+> var rec = { 'name':'Anil', 'age':35, 'company':'Oracle' }
+undefined
+> typeof rec
+'object'
+> rec.name
+'Anil'
+> rec['name']
+'Anil'
+> rec.salary
+undefined
+> rec.salary = "1500000"
+'1500000'
+> rec
+{ name: 'Anil', age: 35, company: 'Oracle', salary: '1500000' }
+> rec.company = "Microsoft"
+'Microsoft'
+> rec
+{ name: 'Anil', age: 35, company: 'Microsoft', salary: '1500000' }
+> delete rec.age
+true
+> rec
+{ name: 'Anil', company: 'Microsoft', salary: '1500000' }
+>
+> Object.keys(rec)
+[ 'name', 'company', 'salary' ]
+> Object.values(rec)
+[ 'Anil', 'Microsoft', '1500000' ]
